@@ -4,7 +4,7 @@
         "baseUrl": "src",
         "declaration": true,
         "experimentalDecorators": false,
-        "lib": ["es5", "es2015.promise"],
+        "lib": ["es5", "es2015.promise", "es6"],
         "module": "commonjs",
         "moduleResolution": "node",
         "noFallthroughCasesInSwitch": true,
