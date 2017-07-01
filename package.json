@@ -5,6 +5,13 @@
   "description": "Transform a JSON object into a particular format using a specific schema.",
   "main": "lib/index.js",
   "typings": "./lib/index.d.ts",
+  "keywords": [
+    "json",
+    "structure",
+    "schema",
+    "json-structure-schema",
+    "transform"
+  ],
   "directories": {
     "bin": "./bin",
     "lib": "./lib"
@@ -12,6 +19,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cyrilschumacher/json-structure-schema"
+  },
+  "bugs": {
+    "url": "https://github.com/cyrilschumacher/json-structure-schema/issues"
   },
   "engines": {
     "node": ">=5.0"
@@ -24,7 +34,6 @@
     "test": "mocha --compilers ts:ts-node/register --recursive test",
     "test:coverage": "nyc --require ts-node/register _mocha --compilers ts:ts-node/register --recursive test/unit"
   },
-  "keywords": [],
   "author": {
     "name": "Cyril Schumacher",
     "url": "http://www.cyrilschumacher.fr/"
