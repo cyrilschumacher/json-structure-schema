@@ -40,7 +40,7 @@ describe("readFileAsync", () => {
         readFileStub.callsFake(func);
 
         // When
-        const content = readFileAsync("foo.json");
+        const content = readFileAsync("foo.json", "utf8");
 
         // Then
         return chai.expect(content).to.eventually.fulfilled.and.to.be.eql("test");

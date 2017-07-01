@@ -48,6 +48,17 @@ describe("readJsonFileContentAsync", () => {
         return chai.expect(read).to.eventually.fulfilled.and.to.be.eql({ key: "value" });
     });
 
+    it("should return JSON object with custom encoding", () => {
+        // Given
+        readFileStub.withArgs("foo.json", "ascii").resolves("{\"key\": \"value\"}");
+
+        // When
+        const read = readJsonFileContentAsync("foo.json", "ascii");
+
+        // Then
+        return chai.expect(read).to.eventually.fulfilled.and.to.be.eql({ key: "value" });
+    });
+
     it("should throw exception with missing file", () => {
         // Given
         readFileStub.withArgs("non-existent.json").rejects(void 0);

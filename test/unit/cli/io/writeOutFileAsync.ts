@@ -48,6 +48,17 @@ describe("writeOutFileAsync", () => {
         return chai.expect(writted).to.eventually.fulfilled;
     });
 
+    it("should write JSON object with custom encoding", () => {
+        // Given
+        writeFileStub.withArgs("foo.json", "{}", "ascii").resolves();
+
+        // When
+        const writted = writeOutFileAsync("foo.json", "{}", "ascii");
+
+        // Then
+        return chai.expect(writted).to.eventually.fulfilled;
+    });
+
     it("should throw error", () => {
         // Given
         writeFileStub.withArgs("foo.json", "{}").rejects();
