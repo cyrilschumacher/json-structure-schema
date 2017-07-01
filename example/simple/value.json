@@ -1,0 +1,6 @@
+{
+	"_key1": "value1",
+	"_key2": 123,
+	"_key3": ["a", "b", "c"],
+	"_key4": "ignored"
+}

@@ -31,7 +31,7 @@ export function adaptValueFromSchema(value: IMap, schemaValue: ISchemaToken) {
         if (!exists && defaultValue) {
             return defaultValue;
         } else if (!exists && isRequired && !defaultValue) {
-            throw new Error("Not exists: " + schemaValue.__pattern__);
+            throw new Error(`A required property: '${schemaValue.__pattern__}' is missing.`);
         } else if (exists) {
             const converter = schemaValue.__converter__;
             if (converter) {

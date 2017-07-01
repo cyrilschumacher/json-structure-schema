@@ -1,0 +1,6 @@
+{
+	"key1": {
+		"__pattern__": "_non-existent",
+		"__required__": true
+	}
+}

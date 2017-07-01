@@ -227,7 +227,7 @@ describe("index", () => {
         const fn = () => transform(value, schema);
 
         // Then
-        chai.expect(fn).to.be.throw("Not exists: _key");
+        chai.expect(fn).to.be.throw("A required property: '_key' is missing.");
     });
 
     it("should not throw exception if required but exists", () => {

@@ -1,0 +1,10 @@
+{
+	"key1": {
+		"__pattern__": "_non-existent",
+		"__default__": "default"
+	},
+	"key2": {
+		"__pattern__": "_key1",
+		"__default__": "default"
+	}
+}

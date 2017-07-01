@@ -1,0 +1,13 @@
+{
+	"key1": "value1",
+	"key2": 123,
+	"node": {
+		"key3": [
+			"value3",
+			"value4"
+		],
+		"ignored": {
+			"key6": "ignored"
+		}
+	}
+}

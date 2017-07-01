@@ -30,13 +30,8 @@ import { readJsonValue } from "../../../src/transform/readJsonValue";
 describe("readJsonValue", () => {
     let adaptValueFromSchemaStub: sinon.SinonStub;
 
-    beforeEach(() => {
-        adaptValueFromSchemaStub = sinon.stub(adaptValueFromSchema, "adaptValueFromSchema");
-    });
-
-    afterEach(() => {
-        adaptValueFromSchemaStub.restore();
-    });
+    beforeEach(() => adaptValueFromSchemaStub = sinon.stub(adaptValueFromSchema, "adaptValueFromSchema"));
+    afterEach(() => adaptValueFromSchemaStub.restore());
 
     it("should call 'adaptValueFromSchema' one time", () => {
         // Given

@@ -1,0 +1,15 @@
+{
+	"_key1": {
+		"__pattern__": "key1"
+	},
+	"_key2": {
+		"_key3": {
+			"__pattern__": "key2"
+		},
+		"_node": {
+			"_key4": {
+				"__pattern__": "node.key3"
+			}
+		}
+	}
+}
