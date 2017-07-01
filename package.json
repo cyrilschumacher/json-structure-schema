@@ -4,6 +4,7 @@
   "license": "MIT",
   "description": "Transform a JSON object into a particular format using a specific schema.",
   "main": "lib/index.js",
+  "typings": "./lib/index.d.ts",
   "directories": {
     "bin": "./bin",
     "lib": "./lib"

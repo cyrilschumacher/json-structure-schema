@@ -31,7 +31,7 @@ import { readJsonValue } from "./transform/readJsonValue";
  * @param {ISchema}         schema  A schema.
  * @return {Object} The transformed JSON object.
  */
-export function transform(value: IMap, schema: ISchema) {
+export function transform(value: { [key: string]: any }, schema: { [key: string]: {} }) {
     const keys = convertJsonToArray(value);
 
     const converted = {};

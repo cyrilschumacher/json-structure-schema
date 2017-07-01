@@ -23,7 +23,7 @@
 
 import * as program from "commander";
 
-import { executeAsync } from "./cli/executeAsync";
+import { executeAsync } from "./executeAsync";
 
 program
     .version(process.env.npm_package_version!)

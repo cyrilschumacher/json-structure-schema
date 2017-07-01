@@ -18,7 +18,7 @@ This library can be of interest if you retrieve external sources and need to be 
 * a simple function that requires a simple JSON object and a schema
 * and an executable that also offers the same functionality as the function.
 
-This library was developed with the programming language: [TypeScript](http://www.typescriptlang.org/): typing files are available.
+This library was developed with the programming language: [TypeScript](http://www.typescriptlang.org/).
 
 ## Getting Started
 
