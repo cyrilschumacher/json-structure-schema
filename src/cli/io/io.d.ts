@@ -21,14 +21,15 @@
  * SOFTWARE.
  */
 
-import * as fs from "fs";
+type ReadFileResolveCallback = (data: Buffer) => void;
+type RejectCallback = (error: any) => void;
+type WriteFileAsyncCallback = () => void;
 
-export async function writeFileAsync(filename: string, data: string, options: IWriteFileAsyncOptions) {
-    const executor = (resolve: WriteFileAsyncCallback, reject: RejectCallback) => {
-        fs.writeFile(filename, data, options, (error) => {
-            return error ? reject(error) : resolve();
-        });
-    };
+interface IReadFileAsyncOptions {
+    encoding?: string;
+    flag?: string;
+}
 
-    return new Promise(executor);
+interface IWriteFileAsyncOptions {
+    encoding?: string;
 }

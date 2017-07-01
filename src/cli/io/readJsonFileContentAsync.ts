@@ -28,7 +28,8 @@ export async function readJsonFileContentAsync(file: string, encoding = "utf8") 
 
     try {
         const content = await readFileAsync(file, options);
-        return JSON.parse(content) as {};
+        const text = content.toString(encoding);
+        return JSON.parse(text) as {};
     } catch (e) {
         throw new Error(`File: '${file}' cannot be opened.`);
     }

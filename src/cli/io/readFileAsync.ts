@@ -22,6 +22,13 @@
  */
 
 import * as fs from "fs";
-import * as util from "util";
 
-export const readFileAsync = util.promisify(fs.readFile);
+export async function readFileAsync(filename: string, options: IReadFileAsyncOptions) {
+    const executor = (resolve: ReadFileResolveCallback, reject: RejectCallback) => {
+        fs.readFile(filename, options, (error, data) => {
+            return error ? reject(error) : resolve(data);
+        });
+    };
+
+    return new Promise(executor);
+}

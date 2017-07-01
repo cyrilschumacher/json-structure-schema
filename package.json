@@ -13,6 +13,9 @@
     "type": "git",
     "url": "https://github.com/cyrilschumacher/json-structure-schema"
   },
+  "engines": {
+    "node": ">=5.0"
+  },
   "scripts": {
     "build": "tsc",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",

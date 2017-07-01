@@ -146,6 +146,7 @@ describe("cli", () => {
         const process = child_process.spawn("node", args);
         process.stdout.on("data", (message: Buffer) => {
             stdout = message.toString("utf-8");
+            console.log(stdout);
         });
 
         process.on("close", (status) => {
