@@ -43,7 +43,7 @@ const schema = {
 const transformed = transform(value, schema); // { name: "package.name" }
 ```
 
-If you want to have a quick overview of all the features of this library, take a look at the [examples](examples) or [integrations tests](test/integration).
+If you want to have a quick overview of all the features of this library, take a look at the [example](example) or [integrations tests](test/integration).
 
 ### Command-Line
 
@@ -59,7 +59,7 @@ Property names are indeed reserved in the case of this library:
 
 * `__pattern__: `
 
-  Defines the path to source key. This **property is mandatory**: if it is not present in the JSON object of the schema, the library considered it a simple object.
+  Defines the path to source key. This **property is mandatory**: if it is not present in the JSON object of the schema, the library considered it a simple object. Example:
 
 ```json
 { "__pattern__": "node1.node2.key3"}
@@ -67,7 +67,7 @@ Property names are indeed reserved in the case of this library:
 
 * `__required__`
 
-Defines if the source key is required or not. This property can be used with `__default__`: if the value does not exist, the default property is used to set an alternative value.
+Defines if the source key is required or not. This property can be used with `__default__`: if the value does not exist, the default property is used to set an alternative value. Example:
 
 ```json
 { "__required__": "true"}
@@ -75,7 +75,7 @@ Defines if the source key is required or not. This property can be used with `__
 
 * `__default__`
 
-Defines the default value if the source key is missing. In the case of an existing value, this property is ignored.
+Defines the default value if the source key is missing. In the case of an existing value, this property is ignored. Example:
 
 ```json
 { "__default__": "Default value"}
@@ -83,7 +83,7 @@ Defines the default value if the source key is missing. In the case of an existi
 
 * `__converter__`
 
-Defines a converter used to convert the value of the source key to another type or value.
+Defines a converter used to convert the value of the source key to another type or value. Example:
 
 ```javascript
 {
