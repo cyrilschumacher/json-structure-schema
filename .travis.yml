@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "node"
+  - "7.7"
+  - "7"
+  - "6.1"
+  - "6"
+  - "5"
+install:
+  - npm install
+script:
+  - npm run-script build
+  - npm run-script test:coverage
+  - npm run-script coveralls

@@ -1,0 +1,8 @@
+*.log
+*.tgz
+.travis.yml
+node_modules
+src
+test
+tslint.json
+typings
