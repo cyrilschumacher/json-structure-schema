@@ -21,14 +21,9 @@
  * SOFTWARE.
  */
 
-type ReadFileResolveCallback = (data: Buffer) => void;
+type ReadFileResolveCallback = (data: string) => void;
 type RejectCallback = (error: any) => void;
 type WriteFileAsyncCallback = () => void;
-
-interface IReadFileAsyncOptions {
-    encoding?: string;
-    flag?: string;
-}
 
 interface IWriteFileAsyncOptions {
     encoding?: string;

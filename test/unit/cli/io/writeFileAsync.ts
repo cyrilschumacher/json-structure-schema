@@ -21,14 +21,39 @@
  * SOFTWARE.
  */
 
+import * as chai from "chai";
 import * as fs from "fs";
+import * as sinon from "sinon";
 
-export function readFileAsync(filename: string, encoding = "utf8") {
-    const executor = (resolve: ReadFileResolveCallback, reject: RejectCallback) => {
-        fs.readFile(filename, encoding, (error, data) => {
-            return error ? reject(error) : resolve(data);
-        });
-    };
+import { writeFileAsync } from "../../../../src/cli/io/writeFileAsync";
 
-    return new Promise(executor);
-}
+describe("readFileAsync", () => {
+    let writeFileStub: sinon.SinonStub;
+
+    beforeEach(() => writeFileStub = sinon.stub(fs, "writeFile"));
+    afterEach(() => writeFileStub.restore());
+
+    it("should write data", () => {
+        // Given
+        const func = (filename: string, data: string, options: {}, callback: (error: any) => void) => callback(void 0);
+        writeFileStub.callsFake(func);
+
+        // When
+        const content = writeFileAsync("foo.json", "test", {});
+
+        // Then
+        return chai.expect(content).to.eventually.fulfilled;
+    });
+
+    it("should throw error", () => {
+        // Given
+        const func = (filename: string, data: string, options: {}, callback: (error: any) => void) => callback({});
+        writeFileStub.callsFake(func);
+
+        // When
+        const content = writeFileAsync("foo.json", "test", {});
+
+        // Then
+        return chai.expect(content).to.eventually.rejected;
+    });
+});
