@@ -1,6 +1,5 @@
 *.log
 *.tgz
-.gitignore
 .nycrc
 .nyc_output
 .travis.yml

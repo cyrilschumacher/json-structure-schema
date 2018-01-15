@@ -1,6 +1,6 @@
 {
   "name": "json-structure-schema",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Transform a JSON object into a particular format using a specific schema.",
   "main": "lib/index.js",
