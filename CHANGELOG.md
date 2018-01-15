@@ -6,4 +6,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Fix the ENOENT error while the installation: remove `.gitignore` in `.npmignore`.
 
-[0.0.8]: https://github.com/cyrilschumacher/json-structure-schema/compare/1.0.0...1.0.1
+[1.0.1]: https://github.com/cyrilschumacher/json-structure-schema/compare/1.0.0...1.0.1
